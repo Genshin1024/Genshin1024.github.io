@@ -53,6 +53,10 @@
 
 
 
+  
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
@@ -279,6 +283,13 @@
 
     
 
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <head> <!-- ... --> <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" /> <!-- ... --> </head> <body> <!-- ... --> <div id="waline"></div> <script type="module"> import { init } from "https://unpkg.com/@waline/client@v2/dist/waline.mjs";
+init({ el: "#waline", serverURL: "https://hexo-blog-comment-private.vercel.app", }); </script> </body> 
+        </div>
+      </div>
     
   </main>
 
