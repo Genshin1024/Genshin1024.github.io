@@ -16,12 +16,12 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文是一本关于Manjaro安装命令的速查手册，包括更换镜像，配置中文输入法与主题，安装常用软件以及一些其他的自定义设置等。  基本配置更换国内镜像12sudo pacman-mirrors -i -c China -m ranksudo pacman -Syy   中文输入法1sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyi">
+    <meta name="description" content="本文是一本关于Manjaro安装命令的速查手册，包括更换镜像，配置中文输入法与主题，安装常用软件以及一些其他的自定义设置等。  基本配置 更换国内镜像 12sudo pacman-mirrors -i -c China -m ranksudo pacman -Syy 中文输入法 1sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-piny">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Manjaro 安装后速查手册">
 <meta property="og:url" content="https://guixinliu.github.io/2023/04/20/manjaro-cheatsheet/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="本文是一本关于Manjaro安装命令的速查手册，包括更换镜像，配置中文输入法与主题，安装常用软件以及一些其他的自定义设置等。  基本配置更换国内镜像12sudo pacman-mirrors -i -c China -m ranksudo pacman -Syy   中文输入法1sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyi">
+<meta property="og:description" content="本文是一本关于Manjaro安装命令的速查手册，包括更换镜像，配置中文输入法与主题，安装常用软件以及一些其他的自定义设置等。  基本配置 更换国内镜像 12sudo pacman-mirrors -i -c China -m ranksudo pacman -Syy 中文输入法 1sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-piny">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://guixinliu.github.io/img/Manjaro-logo.png">
 <meta property="article:published_time" content="2023-04-20T14:56:11.000Z">
@@ -299,106 +299,101 @@
                 <blockquote>
 <p>本文是一本关于Manjaro安装命令的速查手册，包括更换镜像，配置中文输入法与主题，安装常用软件以及一些其他的自定义设置等。</p>
 </blockquote>
-<h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><h4 id="更换国内镜像"><a href="#更换国内镜像" class="headerlink" title="更换国内镜像"></a>更换国内镜像</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman-mirrors -i -c China -m rank<br>sudo pacman -Syy<br></code></pre></td></tr></table></figure>
-
-
-<h4 id="中文输入法"><a href="#中文输入法" class="headerlink" title="中文输入法"></a>中文输入法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki<br></code></pre></td></tr></table></figure>
-
-
+<h3 id="基本配置">基本配置</h3>
+<h4 id="更换国内镜像">更换国内镜像</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman-mirrors -i -c China -m rank<br>sudo pacman -Syy<br></code></pre></td></tr></table></figure>
+<h4 id="中文输入法">中文输入法</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki<br></code></pre></td></tr></table></figure>
 <p>打开 <code>/etc/environment</code>，写入</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros">GTK_IM_MODULE <span class="hljs-attribute">DEFAULT</span>=fcitx5  <br>QT_IM_MODULE  <span class="hljs-attribute">DEFAULT</span>=fcitx5  <br>XMODIFIERS    <span class="hljs-attribute">DEFAULT</span>=@im=fcitx5  <br>INPUT_METHOD  <span class="hljs-attribute">DEFAULT</span>=fcitx5  <br>SDL_IM_MODULE <span class="hljs-attribute">DEFAULT</span>=fcitx5<br></code></pre></td></tr></table></figure>
-
 <p>替换四季简约主题</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 将整个项目clone到本地：</span><br>git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/thep0y/</span>fcitx5-themes.git<br><br><span class="hljs-comment"># 将想要使用的皮肤复制到该放的位置，以`spring`为例(下同)：</span><br>cd fcitx5-themes<br>cp spring ~<span class="hljs-regexp">/.local/</span>share<span class="hljs-regexp">/fcitx5/</span>themes -r<br><br><span class="hljs-comment"># 修改皮肤配置文件(若没有配置文件则自动创建)：</span><br>vim ~<span class="hljs-regexp">/.config/</span>fcitx5<span class="hljs-regexp">/conf/</span>classicui.conf<br></code></pre></td></tr></table></figure>
-
 <p>将下面的参数复制进去（记得修改字体）：</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># 垂直候选列表</span><br>Vertical Candidate <span class="hljs-attribute">List</span>=<span class="hljs-literal">False</span><br><br><span class="hljs-comment"># 按屏幕 DPI 使用</span><br><span class="hljs-attribute">PerScreenDPI</span>=<span class="hljs-literal">True</span><br><br><span class="hljs-comment"># Font (设置成你喜欢的字体)</span><br><span class="hljs-attribute">Font</span>=<span class="hljs-string">&quot;思源黑体 CN Medium 13&quot;</span><br><br><span class="hljs-comment"># 主题(这里要改成你想要使用的主题名，主题名就在下面)</span><br><span class="hljs-attribute">Theme</span>=spring<br></code></pre></td></tr></table></figure>
-
-
-
-<h4 id="AUR-helper-yay-paru"><a href="#AUR-helper-yay-paru" class="headerlink" title="AUR helper : yay, paru"></a>AUR helper : yay, paru</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S yay<br>sudo pacman -S paru<br></code></pre></td></tr></table></figure>
-
-
-<h3 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h3><h4 id="编译工具"><a href="#编译工具" class="headerlink" title="编译工具"></a>编译工具</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -Sy base-devel<br></code></pre></td></tr></table></figure>
-
-<h4 id="proxychains"><a href="#proxychains" class="headerlink" title="proxychains"></a>proxychains</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S proxychains<br></code></pre></td></tr></table></figure>
+<h4 id="AUR-helper-yay-paru">AUR helper : yay, paru</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S yay<br>sudo pacman -S paru<br></code></pre></td></tr></table></figure>
+<h3 id="常用软件">常用软件</h3>
+<h4 id="编译工具">编译工具</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -Sy base-devel<br></code></pre></td></tr></table></figure>
+<h4 id="proxychains">proxychains</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S proxychains<br></code></pre></td></tr></table></figure>
 <p>yay 和 proxychains 之间存在go依赖的问题。故切换使用 <code>paru</code> 。</p>
-<h4 id="科学上网"><a href="#科学上网" class="headerlink" title="科学上网"></a>科学上网</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">paru -S clash clash-for-windows-bin<br></code></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://github.com/Fndroid/clash_for_windows_pkg/releases/">Releases · Fndroid&#x2F;clash_for_windows_pkg</a></p>
-<h4 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S visual-studio-code-bin<br></code></pre></td></tr></table></figure>
-
-<h4 id="Anaconda"><a href="#Anaconda" class="headerlink" title="Anaconda"></a>Anaconda</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S anaconda<br></code></pre></td></tr></table></figure>
-
-
-<h4 id="WPS"><a href="#WPS" class="headerlink" title="WPS"></a>WPS</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S wps-office<br>paru -S ttf-wps-fonts<br></code></pre></td></tr></table></figure>
-
-
-<h4 id="Microsoft-Edge-浏览器"><a href="#Microsoft-Edge-浏览器" class="headerlink" title="Microsoft Edge 浏览器"></a>Microsoft Edge 浏览器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S microsoft-edge-dev-bin<br></code></pre></td></tr></table></figure>
+<h4 id="科学上网">科学上网</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">paru -S clash clash-for-windows-bin<br></code></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://github.com/Fndroid/clash_for_windows_pkg/releases/">Releases · Fndroid/clash_for_windows_pkg</a></p>
+<h4 id="VSCode">VSCode</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S visual-studio-code-bin<br></code></pre></td></tr></table></figure>
+<h4 id="Anaconda">Anaconda</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S anaconda<br></code></pre></td></tr></table></figure>
+<h4 id="WPS">WPS</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S wps-office<br>paru -S ttf-wps-fonts<br></code></pre></td></tr></table></figure>
+<h4 id="Microsoft-Edge-浏览器">Microsoft Edge 浏览器</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S microsoft-edge-dev-bin<br></code></pre></td></tr></table></figure>
 <blockquote>
 <p>打不开后的修复方案：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/cirry/p/15064441.html">https://www.cnblogs.com/cirry/p/15064441.html</a></p>
 </blockquote>
-<h4 id="坚果云"><a href="#坚果云" class="headerlink" title="坚果云"></a>坚果云</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S nutstore-experimental<br></code></pre></td></tr></table></figure>
-
-<h4 id="obsidian"><a href="#obsidian" class="headerlink" title="obsidian"></a>obsidian</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S obsidian<br></code></pre></td></tr></table></figure>
-
-
-<h4 id="zotero"><a href="#zotero" class="headerlink" title="zotero"></a>zotero</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S  zotero<br></code></pre></td></tr></table></figure>
+<h4 id="坚果云">坚果云</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S nutstore-experimental<br></code></pre></td></tr></table></figure>
+<h4 id="obsidian">obsidian</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S obsidian<br></code></pre></td></tr></table></figure>
+<h4 id="zotero">zotero</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S  zotero<br></code></pre></td></tr></table></figure>
 <p>使用坚果云同步</p>
-<h4 id="fsearch"><a href="#fsearch" class="headerlink" title="fsearch"></a>fsearch</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -s fsearch<br></code></pre></td></tr></table></figure>
-
-<h4 id="向日葵远程控制"><a href="#向日葵远程控制" class="headerlink" title="向日葵远程控制"></a>向日葵远程控制</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S sunloginclient<br><br>sudo systemctl start runsunloginclient.service<br></code></pre></td></tr></table></figure>
-
-
-<h4 id="深度截图"><a href="#深度截图" class="headerlink" title="深度截图"></a>深度截图</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S deepin-screenshot<br></code></pre></td></tr></table></figure>
-
-
-<h4 id="网易云"><a href="#网易云" class="headerlink" title="网易云"></a>网易云</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S  yesplaymusic<br></code></pre></td></tr></table></figure>
-
-
-<h4 id="腾讯会议"><a href="#腾讯会议" class="headerlink" title="腾讯会议"></a>腾讯会议</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">paru -S wemeet<br></code></pre></td></tr></table></figure>
-
-
-<h4 id="qq"><a href="#qq" class="headerlink" title="qq"></a>qq</h4><p>官方有最新基于electron的 <a target="_blank" rel="noopener" href="https://im.qq.com/linuxqq/index.shtml">QQ Linux版-新不止步·乐不设限</a></p>
-<h4 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S deepin-wine-wechat<br> <span class="hljs-comment"># 清除下载缓存</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="KeepassXC"><a href="#KeepassXC" class="headerlink" title="KeepassXC"></a>KeepassXC</h4><blockquote>
+<h4 id="fsearch">fsearch</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -s fsearch<br></code></pre></td></tr></table></figure>
+<h4 id="向日葵远程控制">向日葵远程控制</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S sunloginclient<br><br>sudo systemctl start runsunloginclient.service<br></code></pre></td></tr></table></figure>
+<h4 id="深度截图">深度截图</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S deepin-screenshot<br></code></pre></td></tr></table></figure>
+<h4 id="网易云">网易云</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S  yesplaymusic<br></code></pre></td></tr></table></figure>
+<h4 id="腾讯会议">腾讯会议</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">paru -S wemeet<br></code></pre></td></tr></table></figure>
+<h4 id="qq">qq</h4>
+<p>官方有最新基于electron的 <a target="_blank" rel="noopener" href="https://im.qq.com/linuxqq/index.shtml">QQ Linux版-新不止步·乐不设限</a></p>
+<h4 id="微信">微信</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S deepin-wine-wechat<br> <span class="hljs-comment"># 清除下载缓存</span><br></code></pre></td></tr></table></figure>
+<h4 id="KeepassXC">KeepassXC</h4>
+<blockquote>
 <p>官网下载appimage。系统自带的第三方软件。keepass客户端无法显示中文，故使用第三方。</p>
 </blockquote>
-<h4 id="obs-stuido"><a href="#obs-stuido" class="headerlink" title="obs-stuido"></a>obs-stuido</h4><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">sudo pacman  -S obs-studio</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="mailspring"><a href="#mailspring" class="headerlink" title="mailspring"></a>mailspring</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S mailspring<br><br>sudo pacman -S gnome-keyring <span class="hljs-comment"># fix keyring error</span><br></code></pre></td></tr></table></figure>
+<h4 id="obs-stuido">obs-stuido</h4>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">sudo pacman  -S obs-studio</span><br></code></pre></td></tr></table></figure>
+<h4 id="mailspring">mailspring</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S mailspring<br><br>sudo pacman -S gnome-keyring <span class="hljs-comment"># fix keyring error</span><br></code></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="https://github.com/Foundry376/Mailspring/issues/511">mailspring keyring error</a></p>
-<h4 id="VMware"><a href="#VMware" class="headerlink" title="VMware"></a>VMware</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ paru -S vmware-workstation        <span class="hljs-comment"># 安装最新版本的vmware-workstation</span><br>$ sudo pacman  -S linux-headers    <span class="hljs-comment"># 安装系统对应的linux-headers</span><br></code></pre></td></tr></table></figure>
-<p>否则载入用户组报错: modprobe: WARNING: Module vmmon not found in directory &#x2F;lib&#x2F;modules&#x2F;5.9.16-1-MANJARO</p>
+<h4 id="VMware">VMware</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ paru -S vmware-workstation        <span class="hljs-comment"># 安装最新版本的vmware-workstation</span><br>$ sudo pacman  -S linux-headers    <span class="hljs-comment"># 安装系统对应的linux-headers</span><br></code></pre></td></tr></table></figure>
+<p>否则载入用户组报错: modprobe: WARNING: Module vmmon not found in directory /lib/modules/5.9.16-1-MANJARO</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ sudo modprobe -a vmw_vmci vmmon  <span class="hljs-comment"># 载入vmmon模块</span><br></code></pre></td></tr></table></figure>
-<p>否则启动系统时报错: could not open &#x2F;dev&#x2F;vmmon please make sure that the kernel moduel vmmon is load</p>
+<p>否则启动系统时报错: could not open /dev/vmmon please make sure that the kernel moduel vmmon is load</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ sudo systemctl <span class="hljs-built_in">enable</span> vmware-networks.service  <span class="hljs-comment"># 自启动网络服务</span><br>$ sudo systemctl start  vmware-networks.service  <span class="hljs-comment"># 开启网络服务</span><br><br></code></pre></td></tr></table></figure>
 <p>否则虚拟机无法连接网络。</p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="开机无法进入系统"><a href="#开机无法进入系统" class="headerlink" title="开机无法进入系统"></a>开机无法进入系统</h4><p>开机按住shift，在引导界面，按E进入grub编辑模式，在<code>rw</code>后面加</p>
+<h3 id="其他">其他</h3>
+<h4 id="开机无法进入系统">开机无法进入系统</h4>
+<p>开机按住shift，在引导界面，按E进入grub编辑模式，在<code>rw</code>后面加</p>
 <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">init</span><span class="hljs-operator">=/</span>bin/bash<br></code></pre></td></tr></table></figure>
 <p>此时按<code>Ctrl+X </code>进入单root用户模式。然后进入命令行模式的系统做相应的修复。</p>
-<h4 id="显示农历"><a href="#显示农历" class="headerlink" title="显示农历"></a>显示农历</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S ccal<br><br>ccal -u<br></code></pre></td></tr></table></figure>
-
-
-
-<h4 id="垃圾清理"><a href="#垃圾清理" class="headerlink" title="垃圾清理"></a>垃圾清理</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 清除下载缓存</span><br>$ sudo pacman -Scc  <br><span class="hljs-comment">#清除无用的软件包</span><br>$ sudo pacman -R $(pacman -Qdtq) <br></code></pre></td></tr></table></figure>
-
-
-<h4 id="透明状态栏"><a href="#透明状态栏" class="headerlink" title="透明状态栏"></a>透明状态栏</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ paru -S ocs-url<br></code></pre></td></tr></table></figure>
-
+<h4 id="显示农历">显示农历</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S ccal<br><br>ccal -u<br></code></pre></td></tr></table></figure>
+<h4 id="垃圾清理">垃圾清理</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 清除下载缓存</span><br>$ sudo pacman -Scc  <br><span class="hljs-comment">#清除无用的软件包</span><br>$ sudo pacman -R $(pacman -Qdtq) <br></code></pre></td></tr></table></figure>
+<h4 id="透明状态栏">透明状态栏</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ paru -S ocs-url<br></code></pre></td></tr></table></figure>
 <p>先安装<code>ocs-url</code>，然后导入<a target="_blank" rel="noopener" href="https://store.kde.org/p/1338479/">Panel Transparency Button - KDE Store</a></p>
-<h4 id="性能模式"><a href="#性能模式" class="headerlink" title="性能模式"></a>性能模式</h4><p>查询状态</p>
+<h4 id="性能模式">性能模式</h4>
+<p>查询状态</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">$ cat <span class="hljs-regexp">/sys/</span>devices<span class="hljs-regexp">/system/</span>cpu<span class="hljs-regexp">/cpu0/</span>cpufreq/scaling_governor<br>schedutil<br></code></pre></td></tr></table></figure>
-
 <p>设置性能模式</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">sudo cpupower -c all frequency-set -g performance</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="整系统备份"><a href="#整系统备份" class="headerlink" title="整系统备份"></a>整系统备份</h4><p><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Rsync#Full_system_backup">rsync - ArchWiki</a></p>
+<h4 id="整系统备份">整系统备份</h4>
+<p><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Rsync#Full_system_backup">rsync - ArchWiki</a></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">$ rsync -aAXHv --exclude=&#123;<span class="hljs-string">&quot;/dev/*&quot;</span>,<span class="hljs-string">&quot;/proc/*&quot;</span>,<span class="hljs-string">&quot;/sys/*&quot;</span>,<span class="hljs-string">&quot;/tmp/*&quot;</span>,<span class="hljs-string">&quot;/run/*&quot;</span>,<span class="hljs-string">&quot;/mnt/*&quot;</span>,<span class="hljs-string">&quot;/media/*&quot;</span>,<span class="hljs-string">&quot;/lost+found&quot;</span>&#125; / _/path/to/backup_<br></code></pre></td></tr></table></figure>
-
-<h4 id="改善字体渲染"><a href="#改善字体渲染" class="headerlink" title="改善字体渲染"></a>改善字体渲染</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">yay -S wqy-zenhei  <br>yay -S wqy-bitmapfont<br></code></pre></td></tr></table></figure>
+<h4 id="改善字体渲染">改善字体渲染</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">yay -S wqy-zenhei  <br>yay -S wqy-bitmapfont<br></code></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/343934880">manjaro-kde改善字体渲染效果最简单方法 - 知乎</a> 的评论区</p>
-<h4 id="deepin-wine-wechat中无法切换中文输入法"><a href="#deepin-wine-wechat中无法切换中文输入法" class="headerlink" title="deepin-wine-wechat中无法切换中文输入法"></a>deepin-wine-wechat中无法切换中文输入法</h4><p>在<code>/opt/deepinwine/apps/Deepin-WeChat/run.sh</code>添加以下内容</p>
+<h4 id="deepin-wine-wechat中无法切换中文输入法">deepin-wine-wechat中无法切换中文输入法</h4>
+<p>在<code>/opt/deepinwine/apps/Deepin-WeChat/run.sh</code>添加以下内容</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-built_in">export</span> <span class="hljs-attribute">GTK_IM_MODULE</span>=<span class="hljs-string">&quot;fcitx&quot;</span><br><span class="hljs-built_in">export</span> <span class="hljs-attribute">QT_IM_MODULE</span>=<span class="hljs-string">&quot;fcitx&quot;</span><br><span class="hljs-built_in">export</span> <span class="hljs-attribute">XMODIFIERS</span>=<span class="hljs-string">&quot;@im=fcitx&quot;</span><br></code></pre></td></tr></table></figure>
 <p>然后可正常输入。</p>
 

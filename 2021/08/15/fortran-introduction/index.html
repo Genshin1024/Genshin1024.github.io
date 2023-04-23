@@ -16,12 +16,12 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="这是一本简明的Fortran教程，其中包含了常见的Fortran 语法。具有C语言基础会使学习更加容易。  关于FortranFortran是一门编译型编程语言，即将源代码编译链接成可执行程序，再去执行。Fortan最大的特点是快。 Fortran有两种格式，固定格式和自由格式。固定格式需要在行首输入特定的字符进行标识，并且每一行的长度有限制。而自由格式不需要在行首进行标识。 虽然现在编译器仍然">
+    <meta name="description" content="这是一本简明的Fortran教程，其中包含了常见的Fortran 语法。具有C语言基础会使学习更加容易。  关于Fortran Fortran是一门编译型编程语言，即将源代码编译链接成可执行程序，再去执行。Fortan最大的特点是快。 Fortran有两种格式，固定格式和自由格式。固定格式需要在行首输入特定的字符进行标识，并且每一行的长度有限制。而自由格式不需要在行首进行标识。 虽然现在编译器仍">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简明Fortran教程">
 <meta property="og:url" content="https://guixinliu.github.io/2021/08/15/fortran-introduction/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="这是一本简明的Fortran教程，其中包含了常见的Fortran 语法。具有C语言基础会使学习更加容易。  关于FortranFortran是一门编译型编程语言，即将源代码编译链接成可执行程序，再去执行。Fortan最大的特点是快。 Fortran有两种格式，固定格式和自由格式。固定格式需要在行首输入特定的字符进行标识，并且每一行的长度有限制。而自由格式不需要在行首进行标识。 虽然现在编译器仍然">
+<meta property="og:description" content="这是一本简明的Fortran教程，其中包含了常见的Fortran 语法。具有C语言基础会使学习更加容易。  关于Fortran Fortran是一门编译型编程语言，即将源代码编译链接成可执行程序，再去执行。Fortan最大的特点是快。 Fortran有两种格式，固定格式和自由格式。固定格式需要在行首输入特定的字符进行标识，并且每一行的长度有限制。而自由格式不需要在行首进行标识。 虽然现在编译器仍">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://guixinliu.github.io/img/Fortran.png">
 <meta property="article:published_time" content="2021-08-15T02:21:27.000Z">
@@ -242,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          6k 字
+          5.8k 字
         
       </span>
     
@@ -253,7 +253,7 @@
         
         
         
-          50 分钟
+          49 分钟
         
       </span>
     
@@ -299,11 +299,15 @@
                 <blockquote>
 <p>这是一本简明的Fortran教程，其中包含了常见的Fortran 语法。具有C语言基础会使学习更加容易。</p>
 </blockquote>
-<h2 id="关于Fortran"><a href="#关于Fortran" class="headerlink" title="关于Fortran"></a>关于Fortran</h2><p>Fortran是一门编译型编程语言，即将源代码编译链接成可执行程序，再去执行。Fortan最大的特点是快。</p>
+<h2 id="关于Fortran">关于Fortran</h2>
+<p>Fortran是一门编译型编程语言，即将源代码编译链接成可执行程序，再去执行。Fortan最大的特点是快。</p>
 <p>Fortran有两种格式，固定格式和自由格式。固定格式需要在行首输入特定的字符进行标识，并且每一行的长度有限制。而自由格式不需要在行首进行标识。</p>
 <p>虽然现在编译器仍然支持固定格式，但推荐使用自由格式。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>建议新手使用带gfortran编译器的Code::Blocks，上手简单。</p>
-<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><table>
+<h2 id="安装">安装</h2>
+<p>建议新手使用带gfortran编译器的Code::Blocks，上手简单。</p>
+<h2 id="基础">基础</h2>
+<h3 id="字符集">字符集</h3>
+<table>
 <thead>
 <tr>
 <th>符号数量</th>
@@ -311,7 +315,8 @@
 <th>值</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>26</td>
 <td>大写字母</td>
 <td>A-Z</td>
@@ -334,28 +339,33 @@
 <tr>
 <td>5</td>
 <td>运算符</td>
-<td>+  - *   &#x2F;    **</td>
+<td>+  - *   /    **</td>
 </tr>
 <tr>
 <td>28</td>
 <td>其他符号</td>
-<td>(  )  .  &#x3D;  ,  ‘  $  :  !  “  %  &amp;  ;  &lt;  &gt;  ?  ~  \  [  ]  &#96;  ^  { }</td>
+<td>(  )  .  =  ,  ’  $  :  !  &quot;  %  &amp;  ;  &lt;  &gt;  ?  ~  \  [  ]  `  ^  { }</td>
 </tr>
-</tbody></table>
-<h3 id="程序结构"><a href="#程序结构" class="headerlink" title="程序结构"></a>程序结构</h3><p>一个自由格式的程序示例如下：</p>
+</tbody>
+</table>
+<h3 id="程序结构">程序结构</h3>
+<p>一个自由格式的程序示例如下：</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-function"><span class="hljs-keyword">PROGRAM</span></span> my_first_program<br><span class="hljs-comment">! Purpose:</span><br><span class="hljs-comment">! To illustrate some of the basic features of a Fortran program.</span><br><span class="hljs-comment">!</span><br><span class="hljs-comment">! Declare the variables used in this program.</span><br><span class="hljs-keyword">INTEGER</span> :: i, j, k <span class="hljs-comment">! All variables are integers</span><br><br><span class="hljs-comment">! Get two values to store in variables i and j</span><br><span class="hljs-built_in">WRITE</span> (*,*) <span class="hljs-string">&#x27;Enter the numbers to multiply: &#x27;</span><br>READ (*,*) i, j<br><br><span class="hljs-comment">! Multiply the numbers together</span><br>k = i * j<br><br><span class="hljs-comment">! Write out the result.</span><br><span class="hljs-built_in">WRITE</span> (*,*) <span class="hljs-string">&#x27;Result = &#x27;</span>, k<br><span class="hljs-comment">! Finish up.</span><br><span class="hljs-keyword">STOP</span><br><span class="hljs-keyword">END</span> <span class="hljs-function"><span class="hljs-keyword">PROGRAM</span></span> my_first_program<br></code></pre></td></tr></table></figure>
-
 <p>这个Fortran程序，就像所有的Fortan程序那样被分成了三段：</p>
 <ol>
-<li><p>声明段。此部分由一组不可执行的语句组成，这些语句定义程序的名称和</p>
+<li>
+<p>声明段。此部分由一组不可执行的语句组成，这些语句定义程序的名称和</p>
 <p>程序中引用的变量的数量和类型以及一些编译选项。</p>
 </li>
-<li><p>执行段。此部分由一组可执行的语句组成，这些语句被用来执行特定的任务。</p>
+<li>
+<p>执行段。此部分由一组可执行的语句组成，这些语句被用来执行特定的任务。</p>
 </li>
-<li><p>结构段。此部分由一个或多个语句组成，该语句停止程序的执行，并告诉编译器程序执行完毕。</p>
+<li>
+<p>结构段。此部分由一个或多个语句组成，该语句停止程序的执行，并告诉编译器程序执行完毕。</p>
 </li>
 </ol>
-<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>Fortran是<strong>强变量类型</strong>的语言。</p>
+<h3 id="数据类型">数据类型</h3>
+<p>Fortran是<strong>强变量类型</strong>的语言。</p>
 <ul>
 <li>变量类型必须在编译时确定，并且不允许改变。</li>
 <li>建议显式声明所有变量。</li>
@@ -372,39 +382,43 @@
 <th>数据类型</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>Integer(Kind&#x3D;??) ::</td>
+<tbody>
+<tr>
+<td>Integer(Kind=??) ::</td>
 <td>整型</td>
 </tr>
 <tr>
-<td>Real(Kind&#x3D; ?? ) ::</td>
-<td>实型 &#x2F; 浮点型</td>
+<td>Real(Kind= ?? ) ::</td>
+<td>实型 / 浮点型</td>
 </tr>
 <tr>
-<td>Complex(Kind&#x3D;??) ::</td>
+<td>Complex(Kind=??) ::</td>
 <td>复数型（两个实型的组合）</td>
 </tr>
 <tr>
-<td>Character(Kind&#x3D;1,len&#x3D;??) ::</td>
+<td>Character(Kind=1,len=??) ::</td>
 <td>字符型</td>
 </tr>
 <tr>
-<td>Logical(Kind&#x3D;??) ::</td>
-<td>逻辑型 &#x2F; 布尔型</td>
+<td>Logical(Kind=??) ::</td>
+<td>逻辑型 / 布尔型</td>
 </tr>
 <tr>
 <td>Type( ?? ) ::</td>
 <td>派生类型（上述类型的组合）</td>
 </tr>
-</tbody></table>
-<h4 id="Kind"><a href="#Kind" class="headerlink" title="Kind"></a>Kind</h4><p>数据的Kind属性用以区分不同长度、精度或编码方式的同一种数据类型。Kind 受编译器的影响，具体数值可能会有差异。Kind 对不同的变量类型，表达的意思也不相同。</p>
+</tbody>
+</table>
+<h4 id="Kind">Kind</h4>
+<p>数据的Kind属性用以区分不同长度、精度或编码方式的同一种数据类型。Kind 受编译器的影响，具体数值可能会有差异。Kind 对不同的变量类型，表达的意思也不相同。</p>
 <ul>
 <li>对 Integer ，Kind 值影响整数能表达的最大范围；</li>
 <li>对 Real 和 Complex， Kind 值影响实数的最大范围和最小精度；</li>
 <li>对 Character ，Kind 值表示编码。通常为 ASCII 编码；</li>
 <li>对 Logical ， Kind 值表示长度，对逻辑型无影响。</li>
 </ul>
-<h4 id="整型（Integer）"><a href="#整型（Integer）" class="headerlink" title="整型（Integer）"></a>整型（Integer）</h4><p> Integer 的 Kind，常见 1、2、4、8 等。</p>
+<h4 id="整型（Integer）">整型（Integer）</h4>
+<p>Integer 的 Kind，常见 1、2、4、8 等。</p>
 <table>
 <thead>
 <tr>
@@ -414,7 +428,8 @@
 <th>最大值</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>1</td>
 <td>超短整型</td>
 <td>-(2^7)   -128</td>
@@ -438,21 +453,20 @@
 <td>-(2^63)  -9223372036854775808</td>
 <td>2^63-1  9223372036854775807</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>对于大多数编译器，Kind 默认是 4，占有 4 个字节。但大多数编译器也允许调整默认Kind值。</p>
-<p>并不是所有编译器都允许1、2、4、8的Kind值。某些编译器不支持Kind&#x3D;8， Kind&#x3D;1 ，而某些编译器用1、2、3、4 表示。</p>
+<p>并不是所有编译器都允许1、2、4、8的Kind值。某些编译器不支持Kind=8， Kind=1 ，而某些编译器用1、2、3、4 表示。</p>
 <blockquote>
 <p>TODO：gfortran实验</p>
 </blockquote>
-<p>可以用 k &#x3D; Selected_Int_Kind( i ) 函数来选择能满足要求的Kind。 i 表示需要最大的十进制位数，k 表示返回的能满足范围的最小的Kind值。</p>
+<p>可以用 k = Selected_Int_Kind( i ) 函数来选择能满足要求的Kind。 i 表示需要最大的十进制位数，k 表示返回的能满足范围的最小的Kind值。</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><br><br><span class="hljs-function"><span class="hljs-keyword">Program</span></span> www_fcode_cn<br>	<span class="hljs-keyword">Implicit</span> <span class="hljs-keyword">None</span><br>	<span class="hljs-keyword">Integer</span> , <span class="hljs-keyword">parameter</span> :: KI = <span class="hljs-built_in">Selected_Int_Kind</span>(<span class="hljs-number">9</span>)<br>	<span class="hljs-keyword">Integer</span>(<span class="hljs-keyword">Kind</span>=KI) :: i=<span class="hljs-number">0</span>, j, k<br>	<span class="hljs-built_in">write</span>(*, *) <span class="hljs-keyword">kind</span>(i) , i<br>	<span class="hljs-built_in">write</span>(*, *) <span class="hljs-built_in">huge</span>(i)<br>	i = i + <span class="hljs-number">100_KI</span><br>	<span class="hljs-built_in">write</span>(*,*) i<br><br><span class="hljs-keyword">End</span> <span class="hljs-function"><span class="hljs-keyword">Program</span></span> www_fcode_cn<br></code></pre></td></tr></table></figure>
-
-
-
 <p>整型和整型的计算结果依然是整型！</p>
-<p>例如 1&#x2F;2 &#x3D; 0 ； 3&#x2F;2 &#x3D; 1</p>
-<p>但整数和浮点数的计算结果一般是浮点数，例如 1&#x2F;2.0 &#x3D;0.5 。</p>
-<h4 id="实型-x2F-浮点型（Real）"><a href="#实型-x2F-浮点型（Real）" class="headerlink" title="实型&#x2F;浮点型（Real）"></a>实型&#x2F;浮点型（Real）</h4><p>Real 的 Kind，常见 4、8、16 等。</p>
+<p>例如 1/2 = 0 ； 3/2 = 1</p>
+<p>但整数和浮点数的计算结果一般是浮点数，例如 1/2.0 =0.5 。</p>
+<h4 id="实型-浮点型（Real）">实型/浮点型（Real）</h4>
+<p>Real 的 Kind，常见 4、8、16 等。</p>
 <table>
 <thead>
 <tr>
@@ -462,7 +476,8 @@
 <th>最小值</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>4</td>
 <td>实型</td>
 <td>3.4028235E+38</td>
@@ -480,167 +495,164 @@
 <td>1.1897314E+4932</td>
 <td>3.3621031E-4932</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>对于大多数编译器，Kind 默认是 4，占有 4 个字节。但大多数编译器也允许调整默认Kind值。</p>
-<p>并不是所有编译器都允许4、8、16的Kind值。某些编译器不支持Kind&#x3D;16 ，而某些编译器用1、2、3 表示。</p>
+<p>并不是所有编译器都允许4、8、16的Kind值。某些编译器不支持Kind=16 ，而某些编译器用1、2、3 表示。</p>
 <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">k = <span class="hljs-constructor">Selected_Real_Kind( <span class="hljs-params">r</span> , <span class="hljs-params">p</span> )</span> <br></code></pre></td></tr></table></figure>
-
 <p>可以用这个函数来选择能满足要求的Kind。r 表示需要最大的十进制位数 , p 表示最小的有效位数。k 表示返回的能满足范围的最小的Kind值。</p>
 <p>由于浮点数存在误差，因此我们应该尽量避免以下操作：</p>
 <ol>
-<li><p>对浮点数进行相等判断！</p>
+<li>
+<p>对浮点数进行相等判断！</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-keyword">if</span> ( a == <span class="hljs-number">1.3</span> ) =&gt; <span class="hljs-keyword">if</span>( <span class="hljs-built_in">abs</span>(a-<span class="hljs-number">1.3</span>)&lt;<span class="hljs-number">1.0e-5</span> )<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>用浮点数做为数组角标！</p>
+<li>
+<p>用浮点数做为数组角标！</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs fortran">b = a(<span class="hljs-number">2.0</span>) =&gt; b = a(<span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>用浮点数做为循环变量！ </p>
-<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-keyword">Do</span> r = <span class="hljs-number">0.0</span> , <span class="hljs-number">2.0</span> , <span class="hljs-number">0.1</span> =&gt;   <span class="hljs-keyword">Do</span> i = <span class="hljs-number">0</span> , <span class="hljs-number">20</span><br> 								r = i / <span class="hljs-number">10.0</span><br></code></pre></td></tr></table></figure></li>
+<li>
+<p>用浮点数做为循环变量！</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-keyword">Do</span> r = <span class="hljs-number">0.0</span> , <span class="hljs-number">2.0</span> , <span class="hljs-number">0.1</span> =&gt;   <span class="hljs-keyword">Do</span> i = <span class="hljs-number">0</span> , <span class="hljs-number">20</span><br> 								r = i / <span class="hljs-number">10.0</span><br></code></pre></td></tr></table></figure>
+</li>
 </ol>
 <p>在数值计算中，我们应避免误差的放大和积累，因此设计合理、健壮的算法尤为重要。</p>
-<h4 id="复数型（Complex-）"><a href="#复数型（Complex-）" class="headerlink" title="复数型（Complex ）"></a>复数型（Complex ）</h4><p>Complex 的数据类型与 Real 一致。</p>
+<h4 id="复数型（Complex-）">复数型（Complex ）</h4>
+<p>Complex 的数据类型与 Real 一致。</p>
 <p>但需要注意的是：</p>
-<p>如果 Kind&#x3D;8 的 Real 占用 8 字节，则 Kind&#x3D;8 的 Complex 占有 16 字节。</p>
-<p>若使用 Complex(Kind&#x3D;16) 来定义双精度，但实际上已经是四精度。</p>
+<p>如果 Kind=8 的 Real 占用 8 字节，则 Kind=8 的 Complex 占有 16 字节。</p>
+<p>若使用 Complex(Kind=16) 来定义双精度，但实际上已经是四精度。</p>
 <p>Complex 选择Kind，也使用 Selected_Real_Kind 函数。</p>
-<h4 id="字符型（Character-）"><a href="#字符型（Character-）" class="headerlink" title="字符型（Character ）"></a>字符型（Character ）</h4><p>Character 的 Kind，常见只有一种，即 1 表示 ASCII 编码。</p>
+<h4 id="字符型（Character-）">字符型（Character ）</h4>
+<p>Character 的 Kind，常见只有一种，即 1 表示 ASCII 编码。</p>
 <p>也可以使用 Selected_Char_Kind 来选择。</p>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">k</span> = Selected_Char_Kind( <span class="hljs-string">&#x27;ASCII&#x27;</span> )<br></code></pre></td></tr></table></figure>
-
 <p>字符串定义时必须有长度，且通常是固定的。</p>
 <p>Fortran的字符串没有结束符 \0，所以在字符串操作中，必须注意！</p>
 <p>有必要时需实用 trim 去除尾部空格。</p>
 <p>可通过内部文件在字符串和整型、实型间相互转化。</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">read</span><span class="hljs-params">(字符串S , *)</span></span>   整型或实型变量I  !  字符串-&gt;数字<br><br><span class="hljs-function"><span class="hljs-title">write</span><span class="hljs-params">(字符串S , *)</span></span>  整型或实型变量I  !  数字-&gt;字符串<br></code></pre></td></tr></table></figure>
-
 <p>字符型允许使用“子字符串”进行索引切片。</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><br><span class="hljs-function"><span class="hljs-title">character</span><span class="hljs-params">(len=<span class="hljs-number">12</span>)</span></span> :: 	c = <span class="hljs-string">&quot;www.fcode.cn&quot;</span><br><span class="hljs-function"><span class="hljs-title">c</span><span class="hljs-params">(<span class="hljs-number">5</span>:<span class="hljs-number">9</span>)</span></span> = <span class="hljs-string">&quot;fcode&quot;</span>	!<span class="hljs-comment">// 此时 c=&quot;www.fcode.cn&quot;</span><br><span class="hljs-function"><span class="hljs-title">c</span><span class="hljs-params">(:<span class="hljs-number">3</span>)</span></span>  = <span class="hljs-string">&quot;bbs&quot;</span>	!<span class="hljs-comment">// 此时 c=&quot;bbs.fcode.cn&quot;</span><br><span class="hljs-function"><span class="hljs-title">c</span><span class="hljs-params">(<span class="hljs-number">10</span>:)</span></span> = <span class="hljs-string">&quot;&quot;</span>	!<span class="hljs-comment">// 此时 c=&quot;bbs.fcode___&quot;</span><br><br></code></pre></td></tr></table></figure>
 <p>灵活运用子字符串可以让很多事情事半功倍。</p>
-<h4 id="逻辑型（Logical）"><a href="#逻辑型（Logical）" class="headerlink" title="逻辑型（Logical）"></a>逻辑型（Logical）</h4><p>Logical 的 Kind，通常与该编译器支持的 Integer 一致。</p>
-<h3 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h3><p>Fortran数据除了有类型之外，还有一定的属性，比如Kind。他们用定义时的形容词来赋予。</p>
+<h4 id="逻辑型（Logical）">逻辑型（Logical）</h4>
+<p>Logical 的 Kind，通常与该编译器支持的 Integer 一致。</p>
+<h3 id="变量声明">变量声明</h3>
+<p>Fortran数据除了有类型之外，还有一定的属性，比如Kind。他们用定义时的形容词来赋予。</p>
 <p>Fortran变量名必须以字母开头，且不能太长。</p>
 <p>Fortran声明变量的基本格式：</p>
 <blockquote>
-<p>类型( 属性 ) , 形容词 , 形容词 … :: 变量名（数组外形）&#x3D; 值 , 变量名2（数组外形）&#x3D; 值</p>
+<p>类型( 属性 ) , 形容词 , 形容词 … :: 变量名（数组外形）= 值 , 变量名2（数组外形）= 值</p>
 </blockquote>
 <p>下面是一些例子：</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs Fortran"><span class="hljs-keyword">Real</span>(<span class="hljs-keyword">Kind</span>=<span class="hljs-number">8</span>) , <span class="hljs-keyword">parameter</span> , <span class="hljs-keyword">private</span> :: rVar = <span class="hljs-number">20.0d0</span><br><br><span class="hljs-keyword">Character</span>(Len=<span class="hljs-number">32</span>) , <span class="hljs-keyword">Intent</span>( <span class="hljs-keyword">IN</span> ) :: cStr(<span class="hljs-number">5</span>,<span class="hljs-number">8</span>)<br><br><span class="hljs-keyword">Integer</span> , <span class="hljs-keyword">save</span> :: n = <span class="hljs-number">30</span> , m = <span class="hljs-number">40</span><br><br><span class="hljs-keyword">Integer</span> m<br></code></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h2><table>
+<h2 id="运算符与表达式">运算符与表达式</h2>
+<table>
 <thead>
 <tr>
-<th align="center">运算符</th>
-<th align="center">含义</th>
+<th style="text-align:center">运算符</th>
+<th style="text-align:center">含义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">+</td>
-<td align="center">加</td>
+<tbody>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">加</td>
 </tr>
 <tr>
-<td align="center">-</td>
-<td align="center">减</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">减</td>
 </tr>
 <tr>
-<td align="center">*</td>
-<td align="center">乘</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">乘</td>
 </tr>
 <tr>
-<td align="center">&#x2F;</td>
-<td align="center">除</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">除</td>
 </tr>
 <tr>
-<td align="center">**</td>
-<td align="center">乘方</td>
+<td style="text-align:center">**</td>
+<td style="text-align:center">乘方</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>在写复合表达式时，应注意运算符的优先级。</p>
-<h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><p><img src="https://picutre999.oss-cn-hangzhou.aliyuncs.com/img/20210812212847.png" srcset="/img/loading.gif" lazyload alt="关系运算符对照表（来源：中科大网站）"></p>
-<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p><img src="https://picutre999.oss-cn-hangzhou.aliyuncs.com/img/20210812212946.png" srcset="/img/loading.gif" lazyload alt="逻辑运算符对照表（来源：中科大网站）"></p>
-<h2 id="输入与输出"><a href="#输入与输出" class="headerlink" title="输入与输出"></a>输入与输出</h2><h3 id="Write"><a href="#Write" class="headerlink" title="Write()"></a>Write()</h3><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-built_in">Write</span>(*,*) <span class="hljs-string">&quot;Hello World! &quot;</span><br></code></pre></td></tr></table></figure>
-
+<h3 id="关系运算符">关系运算符</h3>
+<p><img src="https://picutre999.oss-cn-hangzhou.aliyuncs.com/img/20210812212847.png" srcset="/img/loading.gif" lazyload alt="关系运算符对照表（来源：中科大网站）"></p>
+<h3 id="逻辑运算符">逻辑运算符</h3>
+<p><img src="https://picutre999.oss-cn-hangzhou.aliyuncs.com/img/20210812212946.png" srcset="/img/loading.gif" lazyload alt="逻辑运算符对照表（来源：中科大网站）"></p>
+<h2 id="输入与输出">输入与输出</h2>
+<h3 id="Write">Write()</h3>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-built_in">Write</span>(*,*) <span class="hljs-string">&quot;Hello World! &quot;</span><br></code></pre></td></tr></table></figure>
 <p><code>Write(*, *)</code>中第一个星号代表使用默认输出位置，即屏幕，第二个星号代表不特别设置输出格式。</p>
-<h3 id="格式化输入输出"><a href="#格式化输入输出" class="headerlink" title="格式化输入输出"></a>格式化输入输出</h3><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-built_in">write</span>(*,<span class="hljs-string">&#x27;(1i5)&#x27;</span>) <span class="hljs-number">12345</span><br></code></pre></td></tr></table></figure>
-
-
-
-<h2 id="控制流"><a href="#控制流" class="headerlink" title="控制流"></a>控制流</h2><h3 id="条件分支"><a href="#条件分支" class="headerlink" title="条件分支"></a>条件分支</h3><h4 id="IF语句"><a href="#IF语句" class="headerlink" title="IF语句"></a>IF语句</h4><p>IF语句常见的简单结构：</p>
+<h3 id="格式化输入输出">格式化输入输出</h3>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-built_in">write</span>(*,<span class="hljs-string">&#x27;(1i5)&#x27;</span>) <span class="hljs-number">12345</span><br></code></pre></td></tr></table></figure>
+<h2 id="控制流">控制流</h2>
+<h3 id="条件分支">条件分支</h3>
+<h4 id="IF语句">IF语句</h4>
+<p>IF语句常见的简单结构：</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-keyword">IF</span> (Expression) <span class="hljs-keyword">THEN</span><br>	...<br>	...<br><span class="hljs-keyword">END</span> <span class="hljs-keyword">IF</span><br></code></pre></td></tr></table></figure>
-
 <p>或者：</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-keyword">IF</span> (ConditionA) <span class="hljs-keyword">THEN</span><br>	...<br><span class="hljs-keyword">ELSE</span> <span class="hljs-keyword">IF</span> (ConditionB) <span class="hljs-keyword">THEN</span>	<br>	...<br><span class="hljs-keyword">ELSE</span><br>	...<br><span class="hljs-keyword">END</span> <span class="hljs-keyword">IF</span><br></code></pre></td></tr></table></figure>
-
 <ul>
 <li>IF结构中的逻辑表达式的结果必须是一个单值，不能是数组。</li>
 <li>数组比较ANY, ALL等函数转换</li>
 </ul>
-<h4 id="SELECT-CASE语句"><a href="#SELECT-CASE语句" class="headerlink" title="SELECT CASE语句"></a>SELECT CASE语句</h4><p>SELECT CASE语句的结构：</p>
+<h4 id="SELECT-CASE语句">SELECT CASE语句</h4>
+<p>SELECT CASE语句的结构：</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">CASE</span> (keywd)<br>	<span class="hljs-keyword">CASE</span>(A)<br>		...<br>	<span class="hljs-keyword">CASE</span>(B)<br>		...<br>	<span class="hljs-keyword">CASE</span> <span class="hljs-keyword">DEFAULT</span><br>		...<br><span class="hljs-keyword">END</span> <span class="hljs-keyword">SELECT</span><br></code></pre></td></tr></table></figure>
-
 <p>一般情况下，SELECT CASE语句可以与IF语句进行等价转换。</p>
-<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><h4 id="DO循环"><a href="#DO循环" class="headerlink" title="DO循环"></a>DO循环</h4><p>DO循环语句的结构如下：</p>
+<h3 id="循环">循环</h3>
+<h4 id="DO循环">DO循环</h4>
+<p>DO循环语句的结构如下：</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-keyword">DO</span> i=<span class="hljs-built_in">min</span>, <span class="hljs-built_in">max</span>, step<br>	...<br><span class="hljs-keyword">END</span> <span class="hljs-keyword">DO</span><br></code></pre></td></tr></table></figure>
-
-
-
-<h4 id="DO-WHILE循环"><a href="#DO-WHILE循环" class="headerlink" title="DO WHILE循环"></a>DO WHILE循环</h4><p>DO WHILE循环语句的结构如下：</p>
+<h4 id="DO-WHILE循环">DO WHILE循环</h4>
+<p>DO WHILE循环语句的结构如下：</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-keyword">DO</span> <span class="hljs-keyword">WHILE</span> (Expression)<br>	...<br><span class="hljs-keyword">END</span> <span class="hljs-keyword">DO</span><br></code></pre></td></tr></table></figure>
-
-
-
-<h4 id="循环控制"><a href="#循环控制" class="headerlink" title="循环控制"></a>循环控制</h4><ul>
+<h4 id="循环控制">循环控制</h4>
+<ul>
 <li>CYCLE：忽略本轮循环剩余内容，直接进入下一轮循环。</li>
 <li>EXIT： （用于循环时）忽略循环剩余内容，跳出（指定）循环。</li>
 </ul>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="数组的基本使用"><a href="#数组的基本使用" class="headerlink" title="数组的基本使用"></a>数组的基本使用</h3><h4 id="数组的定义"><a href="#数组的定义" class="headerlink" title="数组的定义"></a>数组的定义</h4><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-keyword">Integer</span> :: a(<span class="hljs-number">10</span>) <span class="hljs-comment">! 定义1*10的数组</span><br><span class="hljs-keyword">Integer</span> :: a(<span class="hljs-number">10</span>,<span class="hljs-number">10</span>) <span class="hljs-comment">! 定义10*10的数组</span><br><span class="hljs-keyword">Integer</span> :: a(<span class="hljs-number">10</span>,<span class="hljs-number">10</span>) <span class="hljs-comment">! 定义10*10的数组</span><br></code></pre></td></tr></table></figure>
-
-
-
-<h3 id="数组的操作"><a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h3><p>数组的索引从1开始。</p>
-<h4 id="赋初值"><a href="#赋初值" class="headerlink" title="赋初值"></a>赋初值</h4><h4 id="Data赋值"><a href="#Data赋值" class="headerlink" title="Data赋值"></a>Data赋值</h4><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-keyword">Integer</span> :: a(<span class="hljs-number">5</span>) <span class="hljs-comment">! 定义1*5的数组</span><br><span class="hljs-keyword">Data</span> a /<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>/ <span class="hljs-comment">! 依次赋值</span><br><span class="hljs-keyword">Data</span> a /<span class="hljs-number">3</span>*<span class="hljs-number">5</span>/ <span class="hljs-comment">! 表示这里有5个3</span><br></code></pre></td></tr></table></figure>
-
-<h5 id="隐式循环"><a href="#隐式循环" class="headerlink" title="隐式循环"></a>隐式循环</h5><p>一个隐式循环的例子如下：</p>
+<h2 id="数组">数组</h2>
+<h3 id="数组的基本使用">数组的基本使用</h3>
+<h4 id="数组的定义">数组的定义</h4>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-keyword">Integer</span> :: a(<span class="hljs-number">10</span>) <span class="hljs-comment">! 定义1*10的数组</span><br><span class="hljs-keyword">Integer</span> :: a(<span class="hljs-number">10</span>,<span class="hljs-number">10</span>) <span class="hljs-comment">! 定义10*10的数组</span><br><span class="hljs-keyword">Integer</span> :: a(<span class="hljs-number">10</span>,<span class="hljs-number">10</span>) <span class="hljs-comment">! 定义10*10的数组</span><br></code></pre></td></tr></table></figure>
+<h3 id="数组的操作">数组的操作</h3>
+<p>数组的索引从1开始。</p>
+<h4 id="赋初值">赋初值</h4>
+<h4 id="Data赋值">Data赋值</h4>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-keyword">Integer</span> :: a(<span class="hljs-number">5</span>) <span class="hljs-comment">! 定义1*5的数组</span><br><span class="hljs-keyword">Data</span> a /<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>/ <span class="hljs-comment">! 依次赋值</span><br><span class="hljs-keyword">Data</span> a /<span class="hljs-number">3</span>*<span class="hljs-number">5</span>/ <span class="hljs-comment">! 表示这里有5个3</span><br></code></pre></td></tr></table></figure>
+<h5 id="隐式循环">隐式循环</h5>
+<p>一个隐式循环的例子如下：</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-keyword">Integer</span> :: a(<span class="hljs-number">10</span>)<br><span class="hljs-keyword">Integer</span> :: i<br>...<br>a = [(i,i=<span class="hljs-number">1</span>,<span class="hljs-number">10</span>)]<br></code></pre></td></tr></table></figure>
-
-
-
-<h4 id="对整个矩阵的操作"><a href="#对整个矩阵的操作" class="headerlink" title="对整个矩阵的操作"></a>对整个矩阵的操作</h4><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-comment">!a,b,c是三个相同大小的矩阵。b和c相同位置的相加，再赋值给a中的相同位置。-，*，/操作类似。</span><br>a = b+c  <br><br><span class="hljs-comment">! 求矩阵中每一个元素的sin值。</span><br>a = <span class="hljs-built_in">sin</span>(b)<br></code></pre></td></tr></table></figure>
-
-
-
-<h4 id="索引切片"><a href="#索引切片" class="headerlink" title="索引切片"></a>索引切片</h4><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-comment">!a(3),a(4),a(5)设置成5</span><br>a(<span class="hljs-number">3</span>:<span class="hljs-number">5</span>)=<span class="hljs-number">5</span><br><br><span class="hljs-comment">!a(3)=3,a(4)=4,a(5)=5</span><br>a(<span class="hljs-number">3</span>:<span class="hljs-number">5</span>)=(/<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)/<br></code></pre></td></tr></table></figure>
-
-<h5 id="where"><a href="#where" class="headerlink" title="where"></a>where</h5><h5 id="forall"><a href="#forall" class="headerlink" title="forall"></a>forall</h5><h4 id="可变大小的数组"><a href="#可变大小的数组" class="headerlink" title="可变大小的数组"></a>可变大小的数组</h4><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-comment">!声明一个可变大小的数组</span><br><span class="hljs-keyword">Integer</span>,<span class="hljs-keyword">allocatable</span> :: a(:)<br><br><span class="hljs-built_in">write</span>(*, *) <span class="hljs-string">&quot;How many students:&quot;</span><br>read(*, *) students<br><span class="hljs-keyword">allocatable</span>(a(students)) <span class="hljs-comment">!给数组分配空间</span><br></code></pre></td></tr></table></figure>
-
-
-
-<h2 id="函数与子程序"><a href="#函数与子程序" class="headerlink" title="函数与子程序"></a>函数与子程序</h2><h3 id="子程序（subroutine）"><a href="#子程序（subroutine）" class="headerlink" title="子程序（subroutine）"></a>子程序（subroutine）</h3><p>子程序拥有独立的变量声明。</p>
+<h4 id="对整个矩阵的操作">对整个矩阵的操作</h4>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-comment">!a,b,c是三个相同大小的矩阵。b和c相同位置的相加，再赋值给a中的相同位置。-，*，/操作类似。</span><br>a = b+c  <br><br><span class="hljs-comment">! 求矩阵中每一个元素的sin值。</span><br>a = <span class="hljs-built_in">sin</span>(b)<br></code></pre></td></tr></table></figure>
+<h4 id="索引切片">索引切片</h4>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-comment">!a(3),a(4),a(5)设置成5</span><br>a(<span class="hljs-number">3</span>:<span class="hljs-number">5</span>)=<span class="hljs-number">5</span><br><br><span class="hljs-comment">!a(3)=3,a(4)=4,a(5)=5</span><br>a(<span class="hljs-number">3</span>:<span class="hljs-number">5</span>)=(/<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)/<br></code></pre></td></tr></table></figure>
+<h5 id="where">where</h5>
+<h5 id="forall">forall</h5>
+<h4 id="可变大小的数组">可变大小的数组</h4>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-comment">!声明一个可变大小的数组</span><br><span class="hljs-keyword">Integer</span>,<span class="hljs-keyword">allocatable</span> :: a(:)<br><br><span class="hljs-built_in">write</span>(*, *) <span class="hljs-string">&quot;How many students:&quot;</span><br>read(*, *) students<br><span class="hljs-keyword">allocatable</span>(a(students)) <span class="hljs-comment">!给数组分配空间</span><br></code></pre></td></tr></table></figure>
+<h2 id="函数与子程序">函数与子程序</h2>
+<h3 id="子程序（subroutine）">子程序（subroutine）</h3>
+<p>子程序拥有独立的变量声明。</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-function"><span class="hljs-keyword">program</span></span> subroutine_ex1<br><span class="hljs-keyword">implicit</span> <span class="hljs-keyword">none</span><br>	<span class="hljs-keyword">call</span> sub1()<br>	<span class="hljs-keyword">call</span> sub2()<br>	<span class="hljs-keyword">stop</span><br><span class="hljs-keyword">end</span> <span class="hljs-function"><span class="hljs-keyword">program</span></span> subroutine_ex1<br><br><span class="hljs-function"><span class="hljs-keyword">subroutine</span></span> sub1()<br><span class="hljs-keyword">implicit</span> <span class="hljs-keyword">none</span><br>	<span class="hljs-built_in">write</span>(*,*) <span class="hljs-string">&quot;This is sub1&quot;</span><br>	<span class="hljs-keyword">call</span> sub2()<br>	<span class="hljs-keyword">return</span><br><span class="hljs-keyword">end</span> <span class="hljs-function"><span class="hljs-keyword">subroutine</span></span> sub1<br><br><span class="hljs-function"><span class="hljs-keyword">subroutine</span></span> sub2()<br><span class="hljs-keyword">implicit</span> <span class="hljs-keyword">none</span><br>	<span class="hljs-built_in">write</span>(*,*) <span class="hljs-string">&quot;This is sub2&quot;</span><br>	<span class="hljs-keyword">return</span><br><span class="hljs-keyword">end</span> <span class="hljs-function"><span class="hljs-keyword">subroutine</span></span> sub2<br></code></pre></td></tr></table></figure>
-
-
-
-<h3 id="函数（function）"><a href="#函数（function）" class="headerlink" title="函数（function）"></a>函数（function）</h3><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-function"><span class="hljs-keyword">program</span></span> function_ex1<br>	<span class="hljs-keyword">implicit</span> <span class="hljs-keyword">none</span><br>	<span class="hljs-keyword">real</span> :: a=<span class="hljs-number">1</span><br>	<span class="hljs-keyword">real</span> :: b=<span class="hljs-number">2</span><br>	<span class="hljs-keyword">real</span>,<span class="hljs-keyword">external</span> :: add <span class="hljs-comment">! 声明add是个函数而不是变量</span><br>	<span class="hljs-comment">!调用函数add，不必使用call命令</span><br>	<span class="hljs-built_in">write</span>(*,*) add(a,b)<br>	<span class="hljs-keyword">stop</span><br><span class="hljs-keyword">end</span><br><br><span class="hljs-keyword">real</span> <span class="hljs-function"><span class="hljs-keyword">function</span></span> add(a,b)<br>	<span class="hljs-keyword">implicit</span> <span class="hljs-keyword">none</span><br>	<span class="hljs-keyword">real</span> :: a,b<br>	<span class="hljs-comment">! 这里是在声明函数会返回的数值类型</span><br>	<span class="hljs-comment">! real :: add</span><br><br>	add = a + b<br>	<span class="hljs-keyword">return</span><br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h4><p>写法简单，但只能在本程序内使用。</p>
+<h3 id="函数（function）">函数（function）</h3>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-function"><span class="hljs-keyword">program</span></span> function_ex1<br>	<span class="hljs-keyword">implicit</span> <span class="hljs-keyword">none</span><br>	<span class="hljs-keyword">real</span> :: a=<span class="hljs-number">1</span><br>	<span class="hljs-keyword">real</span> :: b=<span class="hljs-number">2</span><br>	<span class="hljs-keyword">real</span>,<span class="hljs-keyword">external</span> :: add <span class="hljs-comment">! 声明add是个函数而不是变量</span><br>	<span class="hljs-comment">!调用函数add，不必使用call命令</span><br>	<span class="hljs-built_in">write</span>(*,*) add(a,b)<br>	<span class="hljs-keyword">stop</span><br><span class="hljs-keyword">end</span><br><br><span class="hljs-keyword">real</span> <span class="hljs-function"><span class="hljs-keyword">function</span></span> add(a,b)<br>	<span class="hljs-keyword">implicit</span> <span class="hljs-keyword">none</span><br>	<span class="hljs-keyword">real</span> :: a,b<br>	<span class="hljs-comment">! 这里是在声明函数会返回的数值类型</span><br>	<span class="hljs-comment">! real :: add</span><br><br>	add = a + b<br>	<span class="hljs-keyword">return</span><br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
+<h4 id="匿名函数">匿名函数</h4>
+<p>写法简单，但只能在本程序内使用。</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-function"><span class="hljs-keyword">program</span></span> function_ex2<br>	<span class="hljs-keyword">implicit</span> <span class="hljs-keyword">none</span><br>	<span class="hljs-keyword">real</span> :: a=<span class="hljs-number">1</span><br>	<span class="hljs-keyword">real</span> :: b=<span class="hljs-number">2</span><br>	<span class="hljs-keyword">real</span> add <br>	add(a,b)= a+b<br>	<span class="hljs-built_in">write</span>(*,*) add(a,b)<br>	<span class="hljs-keyword">stop</span><br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><p>实例：写入矩阵到txt</p>
+<h2 id="文件操作">文件操作</h2>
+<p>实例：写入矩阵到txt</p>
 <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs Fortran"><span class="hljs-keyword">real</span> :: a(n,m)<br>a = <span class="hljs-number">1.</span><br>open(<span class="hljs-number">111</span>, <span class="hljs-keyword">file</span>=<span class="hljs-string">&quot;example.txt&quot;</span>)<br><span class="hljs-keyword">do</span> i= <span class="hljs-number">1</span>, n<br>  <span class="hljs-keyword">do</span> j=<span class="hljs-number">1</span>, m<br>    <span class="hljs-comment">! 写入矩阵</span><br>    <span class="hljs-built_in">write</span>(<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;(1F20.5)&#x27;</span>,<span class="hljs-keyword">advance</span>=<span class="hljs-string">&#x27;no&#x27;</span>) a(i,j)<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">do</span><br>  <span class="hljs-built_in">write</span>(*,*) <br><span class="hljs-keyword">end</span> <span class="hljs-keyword">do</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="标准数学函数"><a href="#标准数学函数" class="headerlink" title="标准数学函数"></a>标准数学函数</h2><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Fortran"><span class="hljs-built_in">exp</span>()  <span class="hljs-built_in">sqrt</span>() <span class="hljs-built_in">sin</span>() <span class="hljs-built_in">cos</span>() <span class="hljs-built_in">tan</span>() ...<br></code></pre></td></tr></table></figure>
-
-
-
-
-
+<h2 id="标准数学函数">标准数学函数</h2>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Fortran"><span class="hljs-built_in">exp</span>()  <span class="hljs-built_in">sqrt</span>() <span class="hljs-built_in">sin</span>() <span class="hljs-built_in">cos</span>() <span class="hljs-built_in">tan</span>() ...<br></code></pre></td></tr></table></figure>
 
                 
               </div>
