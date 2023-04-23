@@ -16,16 +16,16 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Julia是什么？ Julia是一门新兴的高性能科学计算语言。Julia拥有Python般简单的语法，又有着C般的计算速度。 Julia安装 首先，下载Julia二进制环境，地址为  Julia 二进制安装程序 然后，配置系统环境变量JULIA_PKG_SERVER将General列表更换为国内镜像。以Windows平台为例，配置环境变量的方法为（右键）我的电脑 --&gt; 属性 --&gt;">
+    <meta name="description" content="Julia是什么？ Julia是一门新兴的高性能科学计算语言。Julia拥有Python般简单的语法，又有着C般的计算速度。 Julia安装 首先，下载Julia二进制环境，地址为  Julia 二进制安装程序-USTC镜像 然后，配置系统环境变量JULIA_PKG_SERVER将General列表更换为国内镜像。以Windows平台为例，配置环境变量的方法为（右键）我的电脑 --&gt; 属性">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Julia 入门指南">
 <meta property="og:url" content="https://guixinliu.github.io/2022/01/28/julia-introduction/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Julia是什么？ Julia是一门新兴的高性能科学计算语言。Julia拥有Python般简单的语法，又有着C般的计算速度。 Julia安装 首先，下载Julia二进制环境，地址为  Julia 二进制安装程序 然后，配置系统环境变量JULIA_PKG_SERVER将General列表更换为国内镜像。以Windows平台为例，配置环境变量的方法为（右键）我的电脑 --&gt; 属性 --&gt;">
+<meta property="og:description" content="Julia是什么？ Julia是一门新兴的高性能科学计算语言。Julia拥有Python般简单的语法，又有着C般的计算速度。 Julia安装 首先，下载Julia二进制环境，地址为  Julia 二进制安装程序-USTC镜像 然后，配置系统环境变量JULIA_PKG_SERVER将General列表更换为国内镜像。以Windows平台为例，配置环境变量的方法为（右键）我的电脑 --&gt; 属性">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://guixinliu.github.io/img/julia-logo.png">
 <meta property="article:published_time" content="2022-01-28T02:21:27.000Z">
-<meta property="article:modified_time" content="2023-04-20T15:44:32.432Z">
+<meta property="article:modified_time" content="2023-04-23T08:06:42.178Z">
 <meta property="article:tag" content="Julia">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://guixinliu.github.io/img/julia-logo.png">
@@ -242,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          1.7k 字
         
       </span>
     
@@ -253,7 +253,7 @@
         
         
         
-          13 分钟
+          14 分钟
         
       </span>
     
@@ -299,11 +299,11 @@
                 <h2 id="Julia是什么？">Julia是什么？</h2>
 <p>Julia是一门新兴的高性能科学计算语言。Julia拥有Python般简单的语法，又有着C般的计算速度。</p>
 <h2 id="Julia安装">Julia安装</h2>
-<p>首先，下载Julia二进制环境，地址为  <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/julia-releases/">Julia 二进制安装程序</a></p>
+<p>首先，下载Julia二进制环境，地址为  <a target="_blank" rel="noopener" href="https://mirrors.ustc.edu.cn/julia-releases/">Julia 二进制安装程序-USTC镜像</a></p>
 <p>然后，配置系统环境变量<code>JULIA_PKG_SERVER</code>将General列表更换为国内镜像。以Windows平台为例，配置环境变量的方法为（右键）我的电脑 --&gt; 属性 --&gt; 高级系统设置 --&gt; 环境变量。然后在用户变量或者系统变量栏下 <code>新建</code> 来添加<code>JULIA_PKG_SERVER</code> 即可</p>
 <p>这里还介绍一种针对 Julia 的全平台通用的方式：<code>$JULIA_DEPOT_PATH/config/startup.jl</code> (Linux 默认为 <code>~/.julia/config/startup.jl</code>，Windows默认为<code>C:/user/YourDesktopName/.julia/config/startup.jl</code>) 文件定义了每次启动 Julia 时都会执行的命令，编辑该文件，添加以下内容即可：</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile"><span class="hljs-comment"># ~/.julia/config/startup.jl</span><br><span class="hljs-keyword">ENV</span>[<span class="hljs-string">&quot;JULIA_PKG_SERVER&quot;</span>] = <span class="hljs-string">&quot;https://mirrors.ustc.edu.cn/julia&quot;</span><br></code></pre></td></tr></table></figure>
-<p>更多平台的配置方法可参考<a target="_blank" rel="noopener" href="https://mirror.tuna.tsinghua.edu.cn/help/julia">Julia 镜像使用帮助</a> 。</p>
+<p>更多平台的配置方法可参考<a target="_blank" rel="noopener" href="https://mirrors.ustc.edu.cn/help/julia.html">Julia 镜像使用帮助 — USTC Mirror Help 文档</a></p>
 <p>终端启动julia，通过<code>versioninfo()</code>查询镜像、版本等信息。</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">julia</span>&gt; versioninfo()<br><span class="hljs-attribute">Julia</span> Version <span class="hljs-number">1</span>.<span class="hljs-number">4</span>.<span class="hljs-number">1</span><br><span class="hljs-attribute">Commit</span> <span class="hljs-number">381693</span>d3df* (<span class="hljs-number">2020</span>-<span class="hljs-number">04</span>-<span class="hljs-number">14</span> <span class="hljs-number">17</span>:<span class="hljs-number">20</span> UTC)<br><span class="hljs-attribute">Platform</span> Info:<br>  <span class="hljs-attribute">OS</span>: Linux (x86_64-pc-linux-gnu)<br>  <span class="hljs-attribute">CPU</span>: Intel(R) Core(TM) i7-<span class="hljs-number">6800</span>K CPU @ <span class="hljs-number">3</span>.<span class="hljs-number">40</span>GHz<br>  <span class="hljs-attribute">WORD_SIZE</span>: <span class="hljs-number">64</span><br>  <span class="hljs-attribute">LIBM</span>: libopenlibm<br>  <span class="hljs-attribute">LLVM</span>: libLLVM-<span class="hljs-number">8</span>.<span class="hljs-number">0</span>.<span class="hljs-number">1</span> (ORCJIT, broadwell)<br><span class="hljs-attribute">Environment</span>:<br>  <span class="hljs-attribute">JULIA_PKG_SERVER</span> = https://mirrors.ustc.edu.cn/julia<br></code></pre></td></tr></table></figure>
 <h2 id="Julia开发环境配置">Julia开发环境配置</h2>
@@ -319,14 +319,14 @@
 </li>
 <li>
 <p><a target="_blank" rel="noopener" href="https://www.math.pku.edu.cn/teachers/lidf/docs/Julia/JuliaIntro.html">Julia语言入门 - 李东风</a><br>
-<a target="_blank" rel="noopener" href="https://www.math.pku.edu.cn/teachers/lidf/">李东风老师的主页</a>上还有一些其他关于统计计算的资料，推荐感兴趣的同学阅读。里面</p>
+<a target="_blank" rel="noopener" href="https://www.math.pku.edu.cn/teachers/lidf/">李东风老师的主页</a>上还有一些其他关于统计计算的资料，推荐感兴趣的同学阅读。里面还包含了一些统计和优化的内容，推荐相关背景的同学阅读。</p>
 </li>
 <li>
 <p><a target="_blank" rel="noopener" href="https://discourse.juliacn.com/t/topic/159">Julia 语言入门指引 - Julia中文社区 </a><br>
 Julia中文社区出品的入门指引。包含诸多常见安装等问题。</p>
 </li>
 <li>
-<p>Julia入门系列之一起读文档</p>
+<p>Julia入门系列之一起读文档：这是社区 Johnny Chen 同学录制的视频教程。</p>
 <ol>
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV18B4y1c7Aa">Julia入门系列之一起读文档（1）：变量、整数与浮点数、数学运算与基本函数、广播及其规则</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1G84y1c7fs">Julia入门系列之一起读文档 (2)：字符串、函数、控制流</a></li>
@@ -335,17 +335,14 @@ Julia中文社区出品的入门指引。包含诸多常见安装等问题。</p
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1p64y1C7Pa">Julia入门系列之一起读文档 (5)：实战Julia包的目录结构、文档与测试、迭代器与矩阵接口</a></li>
 </ol>
 </li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://cn.julialang.org/JuliaDataScience/">Julia Data Science 中文版</a>： 笔者翻译的Julia 数据科学书籍，其中包含Julia 基本语法以及使用Makie.jl 绘图等部分。</p>
+</li>
 </ol>
-<p>这是社区Johnny Chen同学录制的视频教程。</p>
 <h2 id="参考资料">参考资料</h2>
 <ol>
-<li>
-<p><a target="_blank" rel="noopener" href="https://discourse.juliacn.com/t/topic/2969">Julia PkgServer 镜像服务及镜像站索引 - 综合讨论区 / 库的安装及使用 - Julia中文社区 (juliacn.com)</a></p>
-</li>
-<li>
-<p><a target="_blank" rel="noopener" href="https://help.mirrors.cernet.edu.cn/julia/">Julia 软件仓库镜像使用帮助 - MirrorZ Help (cernet.edu.cn)</a></p>
-</li>
-<li></li>
+<li><a target="_blank" rel="noopener" href="https://discourse.juliacn.com/t/topic/2969">Julia PkgServer 镜像服务及镜像站索引 - 综合讨论区 / 库的安装及使用 - Julia中文社区 (juliacn.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://help.mirrors.cernet.edu.cn/julia/">Julia 软件仓库镜像使用帮助 - MirrorZ Help (cernet.edu.cn)</a></li>
 </ol>
 
                 
